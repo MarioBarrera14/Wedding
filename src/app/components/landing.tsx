@@ -215,7 +215,88 @@ export default function WeddingLandingPage() {
             </div>
           </div>
         </section>
+  <section>
+  <div className="max-w-6xl mx-auto px-4 py-12">
+    <h2 className="text-3xl font-light text-center mb-8 text-gray-700">Álbum de fotos</h2>
+    <h3 className="text-4xl font-serif text-center mb-12 text-gray-800">Momentos únicos</h3>
 
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {/* Cada imagen en un contenedor con aspecto cuadrado */}
+      <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
+        <Image
+          src="/foto1.png"
+          alt="Couple in lavender field"
+          layout="fill"
+          objectFit="cover"
+          className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
+        />
+      </div>
+      <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
+        <Image
+          src="/foto2.png"
+          alt="Black and white couple portrait"
+          layout="fill"
+          objectFit="cover"
+          className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
+        />
+      </div>
+      <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
+        <Image
+          src="/foto3.png"
+          alt="Couple in field"
+          layout="fill"
+          objectFit="cover"
+          className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
+        />
+      </div>
+      <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
+        <Image
+          src="/foto4.png"
+          alt="Couple with lavender bouquet"
+          layout="fill"
+          objectFit="cover"
+          className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
+        />
+      </div>
+      <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
+        <Image
+          src="/foto5.png"
+          alt="Couple at sunset"
+          layout="fill"
+          objectFit="cover"
+          className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
+        />
+      </div>
+      <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
+        <Image
+          src="/foto6.png"
+          alt="Couple dancing"
+          layout="fill"
+          objectFit="cover"
+          className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
+        />
+      </div>
+      <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
+        <Image
+          src="/foto7.png"
+          alt="Couple in nature"
+          layout="fill"
+          objectFit="cover"
+          className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
+        />
+      </div>
+      <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
+        <Image
+          src="/foto8.png"
+          alt="Wedding rings close-up"
+          layout="fill"
+          objectFit="cover"
+          className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
+        />
+      </div>
+    </div>
+  </div>
+</section>
         {/* RSVP Form Section */}
         <section id="rsvp" className="py-20">
           <div className="container mx-auto">
