@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { ChevronRightIcon } from "lucide-react";
-import { FaSpotify, FaInstagram } from 'react-icons/fa';
+import { FaSpotify, FaInstagram } from "react-icons/fa";
 import Auboton from "./audiobutton";
 import Button from "@mui/material/Button";
 import EventCard from "./eventcard";
@@ -17,10 +17,9 @@ export default function WeddingLandingPage() {
     minutes: 11,
     seconds: 11,
   });
-  
+
   const [isOverlayOpen, setIsOverlayOpen] = useState(true); // Agregado para controlar la visibilidad del overlay
   const [isAubotonVisible, setIsAubotonVisible] = useState(false); // Agregado para controlar la visibilidad del Auboton
-
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -66,18 +65,28 @@ export default function WeddingLandingPage() {
     setIsAubotonVisible(true); // Mostrar el Auboton después de cerrar el overlay
   };
 
-
   return (
     <div className="min-h-screen bg-[#f8f5f2] text-[#4a5568] font-serif">
       {isOverlayOpen && <CoverOverlay onOpen={handleOverlayOpen} />}
-      <div className={`transition-opacity ${isOverlayOpen ? 'opacity-0' : 'opacity-100'}`}>
-  
+      <div
+        className={`transition-opacity ${
+          isOverlayOpen ? "opacity-0" : "opacity-100"
+        }`}
+      >
         {/* Navigation */}
         <nav className="flex justify-end mr-4 p-4 space-x-4 text-sm bg-white shadow-md">
-          <a href="#rsvp" className="hover:underline">Confirmar Asistencia</a>
-          <a href="#timeline" className="hover:underline">Cronología de la Boda</a>
-          <a href="#dress-code" className="hover:underline">Tipo de Vestimenta</a>
-          <a href="#details" className="hover:underline">Detalles</a>
+          <a href="#rsvp" className="hover:underline">
+            Confirmar Asistencia
+          </a>
+          <a href="#timeline" className="hover:underline">
+            Cronología de la Boda
+          </a>
+          <a href="#dress-code" className="hover:underline">
+            Tipo de Vestimenta
+          </a>
+          <a href="#details" className="hover:underline">
+            Detalles
+          </a>
         </nav>
 
         {/* Hero Section */}
@@ -193,8 +202,8 @@ export default function WeddingLandingPage() {
                 </div>
                 <h2 className="text-2xl mb-4">Nuestra Playlist</h2>
                 <p className="mb-6 text-sm">
-                  Agrega nuestra playlist y recomendá las canciones que no pueden
-                  faltar en nuestra boda
+                  Agrega nuestra playlist y recomendá las canciones que no
+                  pueden faltar en nuestra boda
                 </p>
                 <Button className="bg-[#e9e4df] hover:bg-[#d3cdc7] border-none text-[#8c7e75]">
                   IR A SPOTIFY
@@ -215,100 +224,104 @@ export default function WeddingLandingPage() {
             </div>
           </div>
         </section>
-  <section>
-  <div className="max-w-6xl mx-auto px-4 py-12">
-    <h2 className="text-3xl font-light text-center mb-8 text-gray-700">Álbum de fotos</h2>
-    <h3 className="text-4xl font-serif text-center mb-12 text-gray-800">Momentos únicos</h3>
+        <section>
+          <div className="max-w-6xl mx-auto px-4 py-12">
+            <h2 className="text-3xl font-light text-center mb-8 text-gray-700">
+              Álbum de fotos
+            </h2>
+            <h3 className="text-4xl font-serif text-center mb-12 text-gray-800">
+              Momentos únicos
+            </h3>
 
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-      {/* Cada imagen en un contenedor con aspecto cuadrado */}
-      <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
-        <Image
-          src="/foto1.png"
-          alt="Couple in lavender field"
-          layout="fill"
-          objectFit="cover"
-          className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
-        />
-      </div>
-      <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
-        <Image
-          src="/foto2.png"
-          alt="Black and white couple portrait"
-          layout="fill"
-          objectFit="cover"
-          className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
-        />
-      </div>
-      <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
-        <Image
-          src="/foto3.png"
-          alt="Couple in field"
-          layout="fill"
-          objectFit="cover"
-          className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
-        />
-      </div>
-      <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
-        <Image
-          src="/foto4.png"
-          alt="Couple with lavender bouquet"
-          layout="fill"
-          objectFit="cover"
-          className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
-        />
-      </div>
-      <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
-        <Image
-          src="/foto5.png"
-          alt="Couple at sunset"
-          layout="fill"
-          objectFit="cover"
-          className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
-        />
-      </div>
-      <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
-        <Image
-          src="/foto6.png"
-          alt="Couple dancing"
-          layout="fill"
-          objectFit="cover"
-          className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
-        />
-      </div>
-      <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
-        <Image
-          src="/foto7.png"
-          alt="Couple in nature"
-          layout="fill"
-          objectFit="cover"
-          className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
-        />
-      </div>
-      <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
-        <Image
-          src="/foto8.png"
-          alt="Wedding rings close-up"
-          layout="fill"
-          objectFit="cover"
-          className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
-        />
-      </div>
-    </div>
-  </div>
-</section>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {/* Cada imagen en un contenedor con aspecto cuadrado */}
+              <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
+                <Image
+                  src="/foto1.png"
+                  alt="Couple in lavender field"
+                  layout="fill"
+                  objectFit="cover"
+                  className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
+                />
+              </div>
+              <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
+                <Image
+                  src="/foto2.png"
+                  alt="Black and white couple portrait"
+                  layout="fill"
+                  objectFit="cover"
+                  className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
+                />
+              </div>
+              <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
+                <Image
+                  src="/foto3.png"
+                  alt="Couple in field"
+                  layout="fill"
+                  objectFit="cover"
+                  className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
+                />
+              </div>
+              <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
+                <Image
+                  src="/foto4.png"
+                  alt="Couple with lavender bouquet"
+                  layout="fill"
+                  objectFit="cover"
+                  className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
+                />
+              </div>
+              <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
+                <Image
+                  src="/foto5.png"
+                  alt="Couple at sunset"
+                  layout="fill"
+                  objectFit="cover"
+                  className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
+                />
+              </div>
+              <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
+                <Image
+                  src="/foto6.png"
+                  alt="Couple dancing"
+                  layout="fill"
+                  objectFit="cover"
+                  className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
+                />
+              </div>
+              <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
+                <Image
+                  src="/foto7.png"
+                  alt="Couple in nature"
+                  layout="fill"
+                  objectFit="cover"
+                  className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
+                />
+              </div>
+              <div className="aspect-square relative overflow-hidden rounded-lg shadow-md">
+                <Image
+                  src="/foto8.png"
+                  alt="Wedding rings close-up"
+                  layout="fill"
+                  objectFit="cover"
+                  className="w-full h-full rounded-lg transition-transform transform hover:scale-105 hover:grayscale"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
         {/* RSVP Form Section */}
         <section id="rsvp" className="py-20">
           <div className="container mx-auto">
             <ElegantRSVPForm />
           </div>
         </section>
-          {/* Footer */}
-  <footer className="bg-[#f8f5f2] py-8 text-center">
-    <p className="text-sm text-[#4a5568]">
-      &copy; 2024 Asterbizz. Todos los derechos reservados.
-    </p>
-  </footer>
+        {/* Footer */}
+        <footer className="bg-[#f8f5f2] py-8 text-center">
+          <p className="text-sm text-[#4a5568]">
+            &copy; 2024 Asterbizz. Todos los derechos reservados.
+          </p>
+        </footer>
       </div>
       {isAubotonVisible && <Auboton />}
     </div>
